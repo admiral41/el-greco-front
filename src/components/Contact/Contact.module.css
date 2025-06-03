@@ -1,50 +1,35 @@
-/* Enhanced Contact Section with Consistent Styling */
+/* Core Layout */
 .contactSection {
-  padding: 6rem 2rem;
-  background: rgba(245, 243, 237, 0.85);
-  max-width: 1400px;
-  border: 1px solid rgba(166, 152, 91, 0.3);
-  border-radius: 25px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  padding: 4rem 2rem;
+  background: rgba(245, 243, 237, 0.7);
+  max-width: 1200px;
+  border: 1px solid #a6985b;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   margin: var(--section-margin) auto 0 auto;
   width: calc(100% - 2rem);
-  position: relative;
-  overflow: hidden;
-}
-
-.borderOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 2px solid rgba(166, 152, 91, 0.15);
-  border-radius: 25px;
-  z-index: 1;
-  pointer-events: none;
+  margin-bottom: 22px;
 }
 
 .contactHeader {
   text-align: center;
-  margin-bottom: 4rem;
-  position: relative;
-  z-index: 2;
+  margin-bottom: 3rem;
 }
 
 .contactHeader h2 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-  font-family: "GreatVibes", cursive;
-  margin-bottom: 1rem;
-  line-height: 1.1;
+  font-size: 2.5rem;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
 }
 
 .contactHeader p {
-  font-size: clamp(1rem, 1.3vw, 1.2rem);
-  color: #555;
-  max-width: 700px;
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
   margin: 0 auto;
   font-family: "Montserrat", sans-serif;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 /* Info Cards */
@@ -52,68 +37,53 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
-  margin-bottom: 5rem;
-  position: relative;
-  z-index: 2;
+  gap: 1.8rem;
+  margin-bottom: 4rem;
 }
 
 .infoCard {
-  flex: 1 1 280px;
-  min-width: 280px;
-  max-width: 380px;
+  flex: 1 1 250px;
+  min-width: 250px;
+  max-width: 350px;
   background: white;
-  padding: 2.2rem;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-  transition: all 0.4s ease;
-  border: 1px solid rgba(166, 152, 91, 0.1);
-  position: relative;
+  padding: 1.8rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backface-visibility: hidden;
   overflow: hidden;
 }
 
-.infoCard::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 1px solid rgba(166, 152, 91, 0.1);
-  border-radius: 15px;
-  pointer-events: none;
-}
-
 .infoCard:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .cardContent {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.2rem;
   align-items: flex-start;
 }
 
 .cardIcon {
-  color: #a6985b;
-  font-size: 1.8rem;
+  color: #bfa75e;
+  font-size: 1.6rem;
   margin-top: 0.3rem;
   flex-shrink: 0;
 }
 
 .infoCard h3 {
-  font-size: clamp(1.2rem, 1.5vw, 1.4rem);
+  font-size: 1.25rem;
   color: #333;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.6rem;
   font-family: "Playfair Display", serif;
   letter-spacing: 0.02em;
 }
 
 .infoCard p {
   color: #666;
-  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
-  line-height: 1.7;
+  font-size: 0.97rem;
+  line-height: 1.65;
   font-family: "Montserrat", sans-serif;
   margin: 0;
 }
@@ -122,20 +92,18 @@
 .splitContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 3rem;
-  margin-top: 3rem;
-  position: relative;
-  z-index: 2;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
 }
 
 .mapContainer {
-  flex: 1 1 350px;
-  min-width: 350px;
-  height: 500px;
-  border-radius: 15px;
+  flex: 1 1 300px;
+  min-width: 300px;
+  height: 650px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(166, 152, 91, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  border: 2px solid #eaeaea;
 }
 
 .mapContainer iframe {
@@ -146,203 +114,154 @@
 }
 
 .contactForm {
-  flex: 1 1 350px;
-  min-width: 350px;
+  flex: 1 1 300px;
+  min-width: 300px;
   background: white;
-  padding: 2.8rem;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(166, 152, 91, 0.1);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
 }
 
 .contactForm h3 {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  gap: 0.6rem;
+  font-size: 1.6rem;
   color: #333;
-  margin-bottom: 2rem;
+  margin-bottom: 1.8rem;
   font-family: "Playfair Display", serif;
   letter-spacing: 0.02em;
 }
 
 .formIcon {
-  color: #a6985b;
-  font-size: 1.6rem;
+  color: #bfa75e;
+  font-size: 1.4rem;
 }
 
 .formGroup {
-  margin-bottom: 2rem;
+  margin-bottom: 1.8rem;
 }
 
 .formGroup label {
   display: block;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
   font-weight: 600;
   color: #555;
-  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  font-size: 0.95rem;
   font-family: "Montserrat", sans-serif;
 }
 
 .formGroup input,
 .formGroup textarea {
   width: 100%;
-  padding: 1rem 1.2rem;
+  padding: 0.85rem 1.1rem;
   font-family: "Montserrat", sans-serif;
   border: 1px solid #ddd;
-  border-radius: 10px;
+  border-radius: 8px;
   transition: all 0.3s ease;
-  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  font-size: 0.98rem;
   box-sizing: border-box;
 }
 
 .formGroup input:focus,
 .formGroup textarea:focus {
   outline: none;
-  border-color: #a6985b;
-  box-shadow: 0 0 0 3px rgba(166, 152, 91, 0.15);
+  border-color: #bfa75e;
+  box-shadow: 0 0 0 3px rgba(191, 167, 94, 0.15);
 }
 
 .formGroup textarea {
   resize: vertical;
-  min-height: 180px;
-  line-height: 1.6;
+  min-height: 160px;
+  line-height: 1.5;
 }
 
 .contactForm button {
   width: 100%;
-  padding: 1.2rem;
+  padding: 1.1rem;
   font-weight: 600;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: "Montserrat", sans-serif;
-  font-size: clamp(1rem, 1.2vw, 1.1rem);
+  font-size: 1.05rem;
   letter-spacing: 0.03em;
-  margin-top: 0.5rem;
 }
 
 .contactForm button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(166, 152, 91, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 18px rgba(191, 167, 94, 0.3);
 }
 
 /* Responsive Design */
-@media (max-width: 1200px) {
-  .infoCardsContainer {
-    gap: 1.8rem;
-  }
-  
-  .mapContainer {
-    height: 450px;
-  }
-}
-
 @media (max-width: 992px) {
-  .contactSection {
-    padding: 5rem 2rem;
+  .contactHeader h2 {
+    font-size: 2.2rem;
   }
-  
-  .infoCard {
-    padding: 2rem;
-  }
-  
-  .contactForm {
-    padding: 2.5rem;
+
+  .contactHeader p {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 768px) {
   .contactSection {
-    padding: 4rem 1.5rem;
-    width: calc(100% - 1rem);
+    padding: 3rem 1.5rem;
   }
-  
-  .contactHeader {
+
+  .infoCardsContainer {
     margin-bottom: 3rem;
   }
-  
-  .infoCardsContainer {
-    margin-bottom: 3.5rem;
-    gap: 1.5rem;
-  }
-  
-  .infoCard {
+
+  /* .infoCard {
     min-width: 100%;
-    max-width: 100%;
-  }
-  
+  } */
+
   .splitContainer {
     flex-direction: column;
-    gap: 2.5rem;
   }
-  
-  .mapContainer,
+
+  /* .mapContainer,
   .contactForm {
-    min-width: 100%;
-  }
-  
+    width: 100%;
+  } */
+
   .mapContainer {
-    height: 350px;
+    height: 300px;
   }
-  
+
   .contactForm {
-    padding: 2.2rem;
+    padding: 2rem;
   }
 }
 
 @media (max-width: 480px) {
-  .contactSection {
-    padding: 3.5rem 1.25rem;
-    border-radius: 20px;
-  }
-  
-  .borderOverlay {
-    border-radius: 20px;
-  }
-  
   .contactHeader h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
-  
-  .infoCard {
-    padding: 1.8rem;
-  }
-  
-  .cardIcon {
-    font-size: 1.6rem;
-  }
-  
-  .mapContainer {
-    height: 300px;
-    border-radius: 12px;
-  }
-  
-  .contactForm {
-    padding: 1.8rem;
-    border-radius: 12px;
-  }
-  
-  .contactForm h3 {
-    font-size: 1.5rem;
-  }
-  
-  .formGroup {
-    margin-bottom: 1.6rem;
-  }
-}
 
-@media (max-width: 360px) {
-  .contactSection {
-    padding: 3rem 1rem;
+  .contactHeader p {
+    font-size: 0.95rem;
   }
-  
-  .mapContainer {
-    height: 250px;
-  }
-  
+
   .contactForm {
     padding: 1.5rem;
+  }
+
+  .cardIcon {
+    font-size: 1.4rem;
+  }
+
+  .infoCard h3 {
+    font-size: 1.15rem;
+  }
+
+  .contactForm h3 {
+    font-size: 1.4rem;
+  }
+
+  .mapContainer {
+    height: 250px;
   }
 }

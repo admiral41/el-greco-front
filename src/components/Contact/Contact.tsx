@@ -55,10 +55,9 @@ export default function Contact({ id }: { id?: string }) {
 
   return (
     <section id={id} ref={sectionRef} className={styles.contactSection}>
-      <div className={styles.borderOverlay}></div>
       <div className={styles.contactHeader}>
         <h2 className="golden-text">Contact Us</h2>
-        <p>We'd love to hear from you. Reach out via form, call, or visit us!</p>
+        <p>We’d love to hear from you. Reach out via form, call, or visit us!</p>
       </div>
 
       <div className={styles.infoCardsContainer}>
