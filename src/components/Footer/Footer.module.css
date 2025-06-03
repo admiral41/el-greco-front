@@ -1,0 +1,75 @@
+.footer {
+  background: #000;
+  color: #f5f3ed;
+  padding-top: 0;
+  padding-bottom: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.waveWrapper {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave {
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 1rem;
+  text-align: center;
+}
+
+.logo {
+  font-family: "GreatVibes", cursive;
+  font-size: 2rem;
+  color: #a6985b;
+  margin-bottom: 1rem;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.link {
+  color: #f5f3ed;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #a6985b;
+}
+
+.copy {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .links {
+    flex-direction: flex;
+    gap: 0.6rem;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+  }
+}

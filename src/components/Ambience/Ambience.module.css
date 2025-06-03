@@ -1,0 +1,140 @@
+.ambienceSection {
+  background: rgba(245, 243, 237, 0.9);
+  color: #333;
+  padding: 6vh 0;
+  position: relative;
+  overflow: hidden;
+  /* min-height: 100vh; */
+}
+
+.textContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 80px;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  z-index: 10;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.textLoop {
+  display: flex;
+  align-items: center;
+  padding: 0 0.4em;
+  font-weight: 400;
+}
+
+.heading2 {
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0;
+  color: #bfa75e;
+}
+
+.gray {
+  color: #8c8c8c;
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0 0.4em;
+}
+
+.galleryContainer {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.imageRow {
+  display: flex;
+  position: absolute;
+  width: 150%;
+  height: 48%; /* Adjusted to prevent cropping */
+  will-change: transform;
+  align-items: center; /* Ensure consistent height */
+}
+
+.imageRow:first-child {
+  top: 0;
+}
+
+.imageRow:last-child {
+  bottom: 0;
+}
+
+.ambienceBlock {
+  border-radius: 1.9em;
+  width: 25%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 0 1%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 2px solid white; /* Solid white border */
+  box-sizing: border-box; /* Include border in dimensions */
+}
+
+.ambienceBlock:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.ambienceImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.9);
+  transition: filter 0.4s ease;
+  border-radius: 1.6em; /* Adjusted for border */
+}
+
+.ambienceBlock:hover .ambienceImage {
+  filter: brightness(1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .heading2, .gray {
+    font-size: 3.5rem;
+  }
+  
+  .ambienceBlock {
+    width: 30%;
+  }
+}
+
+@media (max-width: 767px) {
+  .ambienceSection {
+    padding: 10vh 0;
+    min-height: 80vh;
+  }
+  
+  .heading2, .gray {
+    font-size: 3rem;
+  }
+  
+  .textContainer {
+    height: 60px;
+    margin-bottom: 30px;
+  }
+  
+  .galleryContainer {
+    height: 50vh;
+  }
+  
+  .imageRow {
+    width: 200%;
+    height: 45%; /* Adjusted for mobile */
+  }
+  
+  .ambienceBlock {
+    width: 40%;
+    margin: 0 0.5%;
+  }
+}

@@ -1,0 +1,50 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: url('/images/marble-bg.jpg') center/cover;
+  color: #a6985b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: opacity 0.5s ease;
+}
+
+.marbleOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(247, 245, 245, 0.7);
+  z-index: 1;
+}
+
+.title {
+  font-family: "GreatVibes", cursive;
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  z-index: 2;
+  position: relative;
+}
+
+.dot {
+  opacity: 0;
+  font-size: 3rem;
+  color: #a6985b;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+  
+  .dot {
+    font-size: 2.5rem;
+  }
+}

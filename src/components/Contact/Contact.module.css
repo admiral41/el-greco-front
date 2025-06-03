@@ -1,0 +1,267 @@
+/* Core Layout */
+.contactSection {
+  padding: 4rem 2rem;
+  background: rgba(245, 243, 237, 0.7);
+  max-width: 1200px;
+  border: 1px solid #a6985b;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  margin: var(--section-margin) auto 0 auto;
+  width: calc(100% - 2rem);
+  margin-bottom: 22px;
+}
+
+.contactHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contactHeader h2 {
+  font-size: 2.5rem;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+}
+
+.contactHeader p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+}
+
+/* Info Cards */
+.infoCardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.8rem;
+  margin-bottom: 4rem;
+}
+
+.infoCard {
+  flex: 1 1 250px;
+  min-width: 250px;
+  max-width: 350px;
+  background: white;
+  padding: 1.8rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.infoCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.cardContent {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+.cardIcon {
+  color: #bfa75e;
+  font-size: 1.6rem;
+  margin-top: 0.3rem;
+  flex-shrink: 0;
+}
+
+.infoCard h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 0.6rem;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.02em;
+}
+
+.infoCard p {
+  color: #666;
+  font-size: 0.97rem;
+  line-height: 1.65;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+
+/* Map + Form Layout */
+.splitContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.mapContainer {
+  flex: 1 1 300px;
+  min-width: 300px;
+  height: 650px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  border: 2px solid #eaeaea;
+}
+
+.mapContainer iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.contactForm {
+  flex: 1 1 300px;
+  min-width: 300px;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.contactForm h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 1.8rem;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.02em;
+}
+
+.formIcon {
+  color: #bfa75e;
+  font-size: 1.4rem;
+}
+
+.formGroup {
+  margin-bottom: 1.8rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #555;
+  font-size: 0.95rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 0.98rem;
+  box-sizing: border-box;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: #bfa75e;
+  box-shadow: 0 0 0 3px rgba(191, 167, 94, 0.15);
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 160px;
+  line-height: 1.5;
+}
+
+.contactForm button {
+  width: 100%;
+  padding: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.03em;
+}
+
+.contactForm button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 18px rgba(191, 167, 94, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .contactHeader h2 {
+    font-size: 2.2rem;
+  }
+
+  .contactHeader p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactSection {
+    padding: 3rem 1.5rem;
+  }
+
+  .infoCardsContainer {
+    margin-bottom: 3rem;
+  }
+
+  /* .infoCard {
+    min-width: 100%;
+  } */
+
+  .splitContainer {
+    flex-direction: column;
+  }
+
+  /* .mapContainer,
+  .contactForm {
+    width: 100%;
+  } */
+
+  .mapContainer {
+    height: 300px;
+  }
+
+  .contactForm {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactHeader h2 {
+    font-size: 2rem;
+  }
+
+  .contactHeader p {
+    font-size: 0.95rem;
+  }
+
+  .contactForm {
+    padding: 1.5rem;
+  }
+
+  .cardIcon {
+    font-size: 1.4rem;
+  }
+
+  .infoCard h3 {
+    font-size: 1.15rem;
+  }
+
+  .contactForm h3 {
+    font-size: 1.4rem;
+  }
+
+  .mapContainer {
+    height: 250px;
+  }
+}

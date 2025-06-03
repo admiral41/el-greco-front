@@ -1,26 +1,97 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+/* Custom Fonts */
+@font-face {
+  font-family: 'GreatVibes';
+  src: url('/fonts/GreatVibes-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Core Styles */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --max-content-width: 1200px;
+  --section-margin: 2rem;
+  --section-padding: 4rem;
+  --border-radius: 20px;
+  --golden-color: #a6985b;
+  --golden-light: #d1c38e;
+  --cream-bg: rgba(245, 243, 237, 0.85);
+  --text-dark: #333;
+  --text-light: #f5f3ed;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Public Site Styles */
+.public-layout {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.public-layout body {
+  margin: 0;
+  padding: 0;
+  background: url('/images/marble-bg.jpg') center/cover fixed;
+  color: var(--text-dark);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Utility Classes */
+.golden-text {
+  color: var(--golden-color);
+  text-shadow: 0 0 8px rgba(166, 152, 91, 0.3);
+}
+
+.golden-border {
+  border: 1px solid var(--golden-color);
+}
+
+.golden-bg {
+  background-color: var(--golden-color);
+  color: white;
+}
+
+/* Section Container */
+.section-container {
+  max-width: var(--max-content-width);
+  width: 90%;
+  margin: var(--section-margin) auto;
+  padding: var(--section-padding) 3rem;
+  background: var(--cream-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--golden-color);
+}
+
+/* Admin Dashboard Styles */
+.admin-layout {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) { /* Tablet */
+  .section-container {
+    padding: 3rem 2rem;
+    width: 92%;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@media (max-width: 768px) { /* Mobile */
+  .section-container {
+    padding: 2.5rem 1.5rem;
+    width: 94%;
+    margin: 1.5rem auto;
+  }
+}
+
+@media (max-width: 480px) { /* Small mobile */
+  .section-container {
+    padding: 2rem 1rem;
+    width: 96%;
+    margin: 1rem auto;
+  }
 }

@@ -1,0 +1,196 @@
+/* Enhanced with refined borders and responsive design */
+.about {
+  background: rgba(245, 243, 237, 0.85);
+  color: #333;
+  padding: 6rem 2rem;
+  font-family: "Playfair Display", serif;
+  min-height: 100vh;
+  margin: var(--section-margin) auto 0 auto;
+  width: calc(100% - 2rem);
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(166, 152, 91, 0.3);
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.borderOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(166, 152, 91, 0.15);
+  border-radius: 25px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.textContent {
+  flex: 1 1 45%;
+  min-width: 300px;
+  padding: 0 2rem;
+}
+
+.imageContent {
+  flex: 1 1 45%;
+  min-width: 300px;
+  height: 550px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+  font-family: "GreatVibes", cursive;
+  margin-bottom: 2.5rem;
+  line-height: 1.1;
+  color: #a6985b;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text {
+  font-size: clamp(1.1rem, 1.3vw, 1.3rem);
+  line-height: 1.9;
+  margin-bottom: 1.8rem;
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+  border: 1px solid rgba(166, 152, 91, 0.2);
+  filter: brightness(0.95);
+}
+
+/* Medium screens */
+@media (max-width: 1200px) {
+  .container {
+    gap: 4rem;
+  }
+  
+  .imageContent {
+    height: 500px;
+  }
+}
+
+/* Tablet landscape */
+@media (max-width: 1024px) {
+  .about {
+    padding: 5rem 2rem;
+  }
+  
+  .container {
+    gap: 3.5rem;
+  }
+  
+  .imageContent {
+    height: 450px;
+  }
+  
+  .heading {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Tablet portrait */
+@media (max-width: 768px) {
+  .about {
+    padding: 4rem 1.5rem;
+    min-height: auto;
+    width: calc(100% - 1rem);
+  }
+  
+  .container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .textContent, 
+  .imageContent {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+  
+  .imageContent {
+    height: 400px;
+    order: -1;
+  }
+  
+  .textContent {
+    padding: 0;
+  }
+  
+  .heading {
+    margin-bottom: 1.8rem;
+  }
+  
+  .text {
+    margin-bottom: 1.6rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .about {
+    padding: 3.5rem 1.25rem;
+    border-radius: 20px;
+  }
+  
+  .borderOverlay {
+    border-radius: 20px;
+  }
+  
+  .imageContent {
+    height: 350px;
+    border-radius: 15px;
+  }
+  
+  .image {
+    border-radius: 15px;
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1.4rem;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 360px) {
+  .about {
+    padding: 3rem 1rem;
+  }
+  
+  .imageContent {
+    height: 300px;
+  }
+  
+  .heading {
+    font-size: 2.2rem;
+  }
+}

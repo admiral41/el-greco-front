@@ -1,0 +1,139 @@
+.navbar {
+  background: rgba(245, 243, 237, 0.85);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 50;
+}
+.scrolled {
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  transition: background 0.3s ease;
+  position: sticky;
+  top: 0;
+}
+.scrolled .item {
+  color: #fff !important;
+}
+
+.scrolled .item:hover {
+  color: #ddd !important;
+}
+.scrolled .reserve {
+  color: #fff !important;
+  border-color: #fff !important;
+}
+.scrolled .menuBtn {
+  color: #fff !important;
+  border-color: #a6985b !important;
+}
+.logo {
+  font-family: "GreatVibes", cursive;
+  font-size: 2.2rem;
+  color: #a6985b;
+  flex: 1;
+}
+
+/* Center Nav Links */
+.centerNav {
+  display: flex;
+  justify-content: center;
+  gap: 1.8rem;
+  flex: 2;
+  align-items: center;
+}
+
+.item {
+  color: #333; /* Ensured dark text */
+  font-weight: 600;
+  transition: color 0.3s;
+  
+}
+
+.item:hover {
+  color: #333; /* Ensured dark text */
+}
+
+.reserve {
+  position: relative;
+  color: #333; /* Ensured dark text */
+  font-weight: 800;
+  padding: 0.5rem 1rem;
+}
+
+.circle {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 130%;
+  height: 150%;
+  border: 2px solid #a6985b;
+  border-radius: 50%;
+  z-index: -1;
+  transform: rotate(-5deg);
+}
+
+/* Right Menu Section */
+.rightMenu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.menuBtn {
+  border: 2px solid #a6985b;
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  background: transparent;
+  color: #333;
+  font-weight: 800;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: #333;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .centerNav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: rgba(245, 243, 237, 0.95);
+    padding: 1rem 2rem;
+    display: none;
+  }
+
+  .open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .rightMenu {
+    flex-direction: row;
+  }
+
+  .menuBtn {
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+  }
+}
